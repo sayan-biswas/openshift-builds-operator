@@ -37,8 +37,7 @@ var _ = Describe("OpenShiftBuild Controller", func() {
 		ctx := context.Background()
 
 		typeNamespacedName := types.NamespacedName{
-			Name:      resourceName,
-			Namespace: "default", // TODO(user):Modify as needed
+			Name: resourceName,
 		}
 		openshiftbuild := &operatorv1alpha1.OpenShiftBuild{}
 
@@ -48,10 +47,22 @@ var _ = Describe("OpenShiftBuild Controller", func() {
 			if err != nil && errors.IsNotFound(err) {
 				resource := &operatorv1alpha1.OpenShiftBuild{
 					ObjectMeta: metav1.ObjectMeta{
-						Name:      resourceName,
-						Namespace: "default",
+						Name: resourceName,
 					},
-					// TODO(user): Specify other spec details if needed.
+					Spec: operatorv1alpha1.OpenShiftBuildSpec{
+						Shipwright: operatorv1alpha1.ShipwrightSpec{
+							Build: operatorv1alpha1.ShipwrightBuildSpec{
+								ComponentState: operatorv1alpha1.ComponentState{
+									State: "Enabled",
+								},
+							},
+						},
+						SharedResource: operatorv1alpha1.SharedResourceSpec{
+							ComponentState: operatorv1alpha1.ComponentState{
+								State: "Disabled",
+							},
+						},
+					},
 				}
 				Expect(k8sClient.Create(ctx, resource)).To(Succeed())
 			}

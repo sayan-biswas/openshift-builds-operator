@@ -45,7 +45,7 @@ spec:
                 properties:
                   state:
                     default: Disabled
-                    description: State defines the desired state
+                    description: State defines the desired state of a component
                     enum:
                     - Enabled
                     - Disabled
@@ -62,7 +62,7 @@ spec:
                     properties:
                       state:
                         default: Disabled
-                        description: State defines the desired state
+                        description: State defines the desired state of a component
                         enum:
                         - Enabled
                         - Disabled
