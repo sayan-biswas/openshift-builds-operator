@@ -3,6 +3,6 @@ resources:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-- name: controller
-  newName: controller
-  newTag: latest
+- digest: sha256:a02a93c8e257bd1a2a380b5755d1d4e23ad88bdf00e8f0cf552c1a2386ee464b
+  name: controller
+  newName: quay.io/redhat-user-workloads/rh-ee-sabiswas-tenant/openshift-builds/openshift-builds-controller
