@@ -1,5 +1,5 @@
 # operator
-OpenShift Builds operator provides the API to manage Shipwright Build and Shared Resource CSI Driver.
+OpenShift Builds operator provides the API to manage Shipwright Build and Shared Resource CSI Driver. Onboarded to Konflux.
 
 ## Description
 OpenShift Builds operator deploys and manages the following components
