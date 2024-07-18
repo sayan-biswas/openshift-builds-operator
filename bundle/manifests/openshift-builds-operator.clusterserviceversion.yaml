@@ -752,7 +752,7 @@ spec:
                 - name: IMAGE_SHIPWRIGHT_WAITER_CONTAINER_IMAGE
                   value: quay.io/redhat-user-workloads/rh-ee-sabiswas-tenant/openshift-builds/openshift-builds-waiter
                 - name: IMAGE_SHIPWRIGHT_OPENSHIFT_BUILDS_WEBHOOK
-                  value: quay.io/redhat-user-workloads/rh-ee-sabiswas-tenant/openshift-builds/openshift-builds-webhook
+                  value: quay.io/redhat-user-workloads/rh-ee-sabiswas-tenant/openshift-builds/openshift-builds-webhook@sha256:fa20c60e8c4366ff6a42a4599014c78123f3c48fa894e2817987bb85694f9044
                 image: quay.io/redhat-user-workloads/rh-ee-sabiswas-tenant/openshift-builds/openshift-builds-operator:2cfeec6d0fa3a41152c774f8a561e02597e6774d
                 imagePullPolicy: Always
                 livenessProbe:
