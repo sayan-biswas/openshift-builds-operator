@@ -143,7 +143,7 @@ spec:
                 - --leader-elect
                 command:
                 - /manager
-                image: quay.io/redhat-user-workloads/rh-ee-sabiswas-tenant/openshift-builds/openshift-builds-operator@sha256:8e533109020d49fa521554c9bc00ecf284c9d83d4cb2c9e49593d7022b26387c
+                image: quay.io/redhat-user-workloads/rh-ee-sabiswas-tenant/openshift-builds/openshift-builds-operator@sha256:2fef051f29411493a4cd879ac99c6f6a9388645f206dcd25c232bda33e9b1054
                 livenessProbe:
                   httpGet:
                     path: /healthz
